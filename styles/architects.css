@@ -47,7 +47,7 @@
     text-decoration: none;
     font-size: 16px;
 }
-.navbar, .banner, .plants-section, .plant-lover-section{
+.navbar, .banner, .plants-section, .plant-lover-section, .footer{
     max-width: 1440px;
     margin: 0 auto;
     padding:0 20px;
@@ -447,13 +447,14 @@
     height: auto;
   }
 }
+/* responsive design */
 @media (max-width: 768px) {
   .join-section {
     padding: 60px 16px;
   }
 
   .join-overlay {
-    max-width: 90%; /* Let overlay shrink nicely on smaller screens */
+    max-width: 90%; 
     margin: auto;
   }
 
@@ -464,16 +465,13 @@
 
   .newsletter-form {
     flex-direction: column;
-    gap: 12px; /* Keep consistent spacing */
-  }
+    gap: 12px; 
 
   .newsletter-form input[type="email"],
   .join-btn {
-    /* width: 100%; */
-    /* max-width: 100%; */
     flex:none;
-    font-size: 16px; /* Adjust font size if needed */
-    padding: 12px 16px; /* Comfortable padding on mobile */
+    font-size: 16px; 
+    padding: 12px 16px; 
   }
 
   .join-btn {
@@ -482,3 +480,102 @@
     box-sizing: border-box;
   }
 }
+}
+/* footer section */
+.footer {
+  background-color: #f2f2f2;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Group for image and paragraph */
+.footer {
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-brand img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-description {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.footer-links {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start; 
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-column {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: #555;
+  text-decoration: none;
+  font-family: "Inter";
+}
+
+.footer-column a:hover {
+  color: #f67442;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .footer-description {
+    margin-bottom: 16px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-socials li {
+    margin-bottom: 8px;
+  }
+}
+
